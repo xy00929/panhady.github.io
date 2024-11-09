@@ -1,0 +1,737 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #ffffff;
+}
+
+/* Header Section */
+.header {
+    background-color: #1e1e1e; /* Darker background for header */
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo */
+.logo a {
+    color: #ff4b2b; /* Pizza-inspired red color */
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #ff4b2b; /* Red color on hover */
+}
+
+/* Order Now Button */
+.order-now {
+    background-color: #ff4b2b;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.order-now:hover {
+    background-color: #ff3a1d; /* Darker red on hover */
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('./pizza-3007395_1280.jpg'); /* Add your background image URL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    padding: 0 1.5rem;
+}
+
+/* Logo Styling */
+.logo img {
+    height: 70px; /* Adjust height as needed */
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+}
+
+/* Hero Headline */
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Hero Tagline */
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Hero Buttons */
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Primary Button */
+.primary-btn {
+    background-color: #ff4b2b; /* Pizza-inspired red */
+    color: #ffffff;
+}
+
+.primary-btn:hover {
+    background-color: #ff3a1d; /* Darker red on hover */
+}
+
+/* Secondary Button */
+.secondary-btn {
+    background-color: #ffffff;
+    color: #ff4b2b;
+}
+
+.secondary-btn:hover {
+    background-color: #e0e0e0;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide links on smaller screens */
+    }
+
+    /* Order Now Button responsive */
+    .order-now {
+        padding: 0.5rem;
+    }
+}
+
+/* Featured Pizzas Section */
+.featured-pizzas {
+    padding: 2rem 1.5rem;
+    text-align: center;
+}
+
+.featured-pizzas h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #ff4b2b; /* Pizza-inspired red color */
+}
+
+/* Pizza Grid */
+.pizza-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Pizza Card */
+.pizza-card {
+    background-color: #1e1e1e;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.pizza-card:hover {
+    transform: translateY(-5px);
+}
+
+.pizza-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.pizza-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #ff4b2b;
+}
+
+.pizza-card p {
+    font-size: 0.9rem;
+    color: #b3b3b3;
+    margin-bottom: 1rem;
+}
+
+/* Order Button */
+.order-btn {
+    background-color: #ff4b2b;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.order-btn:hover {
+    background-color: #ff3a1d; /* Darker red on hover */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .pizza-card {
+        padding: 1rem;
+    }
+
+    .pizza-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .pizza-card p {
+        font-size: 0.85rem;
+    }
+}
+
+/* Menu Highlights Section */
+.menu-highlights {
+    padding: 2rem 1.5rem;
+    text-align: center;
+}
+
+.menu-highlights h2 {
+    font-size: 2rem;
+    color: #ff4b2b; /* Pizza-inspired red color */
+    margin-bottom: 1.5rem;
+}
+
+/* Menu Grid */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Menu Item */
+.menu-item {
+    background-color: #1e1e1e;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.menu-item img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.menu-item h3 {
+    font-size: 1.25rem;
+    color: #ff4b2b;
+    margin-bottom: 0.5rem;
+}
+
+.menu-item p {
+    font-size: 0.9rem;
+    color: #b3b3b3;
+    margin-bottom: 1rem;
+}
+
+/* Price Tag */
+.price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #ff4b2b;
+    padding: 0.3rem 0.75rem;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .menu-item h3 {
+        font-size: 1.1rem;
+    }
+
+    .menu-item p {
+        font-size: 0.85rem;
+    }
+
+    .price {
+        font-size: 1rem;
+    }
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    padding: 2rem 1.5rem;
+    text-align: center;
+}
+
+.why-choose-us h2 {
+    font-size: 2rem;
+    color: #ff4b2b; /* Pizza-inspired red color */
+    margin-bottom: 1.5rem;
+}
+
+/* Reasons Grid */
+.reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Reason Box */
+.reason {
+    background-color: #1e1e1e;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.reason:hover {
+    transform: translateY(-5px);
+}
+
+.reason img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1rem;
+}
+
+.reason h3 {
+    font-size: 1.25rem;
+    color: #ff4b2b;
+    margin-bottom: 0.5rem;
+}
+
+.reason p {
+    font-size: 0.9rem;
+    color: #b3b3b3;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .reason h3 {
+        font-size: 1.1rem;
+    }
+
+    .reason p {
+        font-size: 0.85rem;
+    }
+}
+
+/* Reviews and Testimonials Section */
+.testimonials {
+    padding: 2rem 1.5rem;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2rem;
+    color: #ff4b2b; /* Pizza-inspired red color */
+    margin-bottom: 1.5rem;
+}
+
+/* Testimonial Grid */
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+    background-color: #1e1e1e;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.stars {
+    color: #ffdd4b; /* Golden color for stars */
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.testimonial-card p {
+    font-size: 0.9rem;
+    color: #b3b3b3;
+    margin-bottom: 0.75rem;
+}
+
+.customer-name {
+    font-size: 0.85rem;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .testimonial-card p {
+        font-size: 0.85rem;
+    }
+
+    .customer-name {
+        font-size: 0.8rem;
+    }
+}
+
+/* Location Finder Section */
+.location-finder {
+    padding: 50px 0;
+    background-color: #1c1c1c;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .location-finder-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 36px;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+  }
+  
+  .location-finder-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .map-container {
+    flex: 1;
+    min-width: 300px;
+    height: 350px;
+    background-color: #2d2d2d;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #bbb;
+    font-size: 18px;
+  }
+  
+  .search-form {
+    flex: 1;
+    min-width: 300px;
+    background-color: #333;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  .search-form label {
+    font-size: 18px;
+    color: #ddd;
+  }
+  
+  .search-form input {
+    padding: 10px;
+    border: 1px solid #444;
+    background-color: #222;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+  }
+  
+  .search-form button.search-btn {
+    padding: 12px;
+    border: none;
+    background-color: #1a73e8;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .search-form button.search-btn:hover {
+    background-color: #0e5bb3;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .location-finder-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+/* Newsletter Signup Section */
+.newsletter-signup {
+    padding: 50px 0;
+    background-color: #1c1c1c;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+  
+  .newsletter-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .section-title {
+    font-size: 36px;
+    color: #e0e0e0;
+    margin-bottom: 10px;
+  }
+  
+  .section-description {
+    font-size: 18px;
+    color: #bbb;
+    margin-bottom: 20px;
+  }
+  
+  .signup-form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .signup-form input {
+    padding: 12px;
+    border: 1px solid #444;
+    background-color: #222;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 60%;
+  }
+  
+  .signup-form button.signup-btn {
+    padding: 12px 20px;
+    border: none;
+    background-color: #1a73e8;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .signup-form button.signup-btn:hover {
+    background-color: #0e5bb3;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .signup-form {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .signup-form input {
+      width: 100%;
+    }
+  }
+
+  /* Footer Section */
+.footer {
+    background-color: #1c1c1c;
+    color: #bbb;
+    padding: 40px 0;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .footer-logo h3 {
+    color: #e0e0e0;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  .links-column h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  .links-column ul {
+    list-style: none;
+    color: #bbb;
+  }
+  
+  .links-column ul li {
+    margin-bottom: 8px;
+  }
+  
+  .links-column ul li a {
+    text-decoration: none;
+    color: #bbb;
+    transition: color 0.3s;
+  }
+  
+  .links-column ul li a:hover {
+    color: #1a73e8;
+  }
+  
+  .footer-social {
+    margin-bottom: 20px;
+  }
+  
+  .footer-social h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  .footer-social ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .footer-social ul li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-social ul li a {
+    text-decoration: none;
+    color: #bbb;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  
+  .footer-social ul li a:hover {
+    color: #1a73e8;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    color: #777;
+  }
+  
+  .footer-bottom p {
+    font-size: 14px;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-logo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  
+    .footer-links {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+  
+    .footer-social {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
